@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my first PWA application</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0
+maximun-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="mainfest" href="mainfest.json">
+</head>
+<body>
+    <header><h3>hello <abbr title="progressive web application">PWA</abbr></h3></header>
+</body>
+<script>
+    if(navigator.serviceWorker!==null){
+        navigator.serviceWorker.register(('sw.js')).then(registartion=>{
+            console.log('support sw',registartion.scope)
+        })
+    }
+</script>
+</html>
